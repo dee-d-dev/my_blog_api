@@ -47,13 +47,13 @@ app.post("/api/uploads", upload.single('file'), (req, res)=> {
 app.use(express.json());
 
 //home
-app.use("/home", homeRoute);
+app.use("/", homeRoute);
 
 //auth router
 app.use("/api/auth", authRoute);
 
 //user route
-app.use("/api/user", userRoute);
+app.use("/api/users", userRoute);
 
 //Post Route
 app.use("/api/posts", postRoute);
