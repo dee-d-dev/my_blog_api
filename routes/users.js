@@ -88,7 +88,6 @@ router.get("/:id", async (req, res) => {
 router.get("/", async (req, res) => {
   try {
     const user = await User.find();
-    // const { password, ...others } = user._doc;
     res.send(user);
   } catch (err) {
     res.status(500).send(`This is the error: ${err}`);
